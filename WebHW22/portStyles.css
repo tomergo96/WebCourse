@@ -103,7 +103,7 @@ nav li:first-child{
   }
 
   #edup{
-    background-color: rgb(137, 43, 226);
+    background-color: rgba(32, 9, 207, 0.484);
     border-radius: 2%;
     
   }
@@ -118,7 +118,7 @@ nav li:first-child{
     
   }
   #volup{
-    background-color: rgba(55, 7, 106, 0.586);
+    background-color: rgba(27, 7, 106, 0.586);
     border-radius: 2%;
     
   }
@@ -126,6 +126,11 @@ nav li:first-child{
     background-color: rgba(43, 226, 131, 0.586);
     border-radius: 2%;
     
+  }
+
+  .imgPro{
+    margin: 10px;
+    padding: 15px;
   }
 
 
@@ -192,16 +197,8 @@ h3{
     padding: 30px;
     text-align: center;
   }
-  #typesBox{
-    background: rgb(56, 139, 58);
-    align-items: center;
-    border-radius: 10px;
 
-    
-    justify-content: center;
 
-   
-}
 .card{
     text-align: center;
     align-items: center;
@@ -216,7 +213,7 @@ h3{
 }
 
 .card:hover{
-    background-color:rgba(10, 182, 53, 0.614); ;
+    background-color:rgba(242, 240, 246, 0.614); ;
 }
 #cardsDiv{
     

@@ -62,7 +62,7 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(245, 245, 245, 0.392);
+    background-color: rgba(245, 245, 245, 0.768);
     box-shadow: -10px 0 10px rgba (0,0,0,0.1);
     backdrop-filter: blur(10px);
     display: none;
@@ -278,7 +278,8 @@ h3{
   }
   #socials {
 
-    font-size: 20px;  
+    font-size: 20px; 
+    color:whitesmoke; 
    }
 }
 

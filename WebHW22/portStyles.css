@@ -312,10 +312,7 @@ h3{
    }
    body{
     font-size: 25px;
-    background-image: url(./images/BackgroundMobile.jpg);
-    background-size: contain;
-    background-repeat: repeat;
-    font-weight: bolder;
+   
     
    }  
 }

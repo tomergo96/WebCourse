@@ -237,11 +237,7 @@ h3{
 
 @media (max-width: 701px)
 {
-  body{
-    background-image: url(./images/BackgroundMobile.jpg);
-    background-size: contain;
-    background-repeat: repeat;
-  }
+
    .hideOnMobile{
     display: none;
    }

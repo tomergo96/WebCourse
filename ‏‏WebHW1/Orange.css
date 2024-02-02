@@ -1,0 +1,128 @@
+body {
+    background: #EEB937;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.orangeImages{
+ width: 300px;
+ height: 300px; 
+ border-radius: 10px;
+ margin: 10px;
+ padding: 10px;
+}
+header{
+    font-size: 30px;
+}
+
+nav{   
+    text-align: center;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li a{
+ color: green;
+text-decoration: none;
+font-style: inherit;
+font-size: large;
+
+}
+.generalSection{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+ 
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: unset;
+}
+h2:hover
+{   
+    
+    text-shadow: 10px 4px 8px rgba(4, 4, 4, 0.689);
+}
+#whatis{
+    background-color: orange;
+}
+#history{
+    background-color:  rgb(255, 136, 0);
+}
+#composition{
+    background-color: rgb(221, 140, 10);
+}
+
+#typesBox{
+    background: rgb(56, 139, 58);
+    align-items: center;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+   
+}
+.card{
+    text-align: center;
+    align-items: center;
+    width: 200;
+    height: 320;
+    background:rgb(84, 197, 97);
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 12px 12px 12px rgb(63, 138, 63);
+}
+
+.card:hover{
+    background-color:rgb(246, 198, 7); ;
+}
+#cardsDiv{
+    
+        display: flex;
+        justify-content: center;
+      
+}
+
+#typesBox h2{
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    max-height: 180px;
+    
+    object-fit: cover;
+  }
+ .orangeFooter{
+    background-image: url("./images/orangeBackground.jpg");
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;   
+    border: 1px solid rgb(162, 221, 155);
+    
+  
+ }
+
+
+ footer nav ul li a{
+   color: rgb(55, 0, 128);
+   background-color: wheat;
+   border-color: black;
+   text-decoration: none;
+   font-style: inherit;
+   font-size:x-large;  
+   }
+
+   footer nav ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    text-align: center;
+   }
+ 
+
+ 
+
+
+  

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="portStyles.css">
+</head>
+<body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="HomePage.html" ><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>&nbsp;&nbsp;Home</a></li>
+        <li><a href="About.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>&nbsp;&nbsp;About</a></li>
+        <li><a href="Skills.html" class="navNow"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-80l65-281L80-550l288-25 112-265 112 265 288 25-218 189 65 281-247-149L233-80Zm247-350Z"/></svg>&nbsp;&nbspResume</a></li>
+        <li><a href="Projects.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m381-240 424-424-57-56-368 367-169-170-57 57 227 226Zm0 113L42-466l169-170 170 170 366-367 172 168-538 538Z"/></svg>&nbsp;&nbsp;Projects</a></li>
+    </ul>
+    <ul>
+            <li class="menuButton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>&nbsp;&nbsp;Resume</a></li>
+            <li class="hideOnMobile"><a href="HomePage.html">Home</a></li>
+            <li class="hideOnMobile"><a href="About.html">About</a></li>
+            <li class="hideOnMobile"><a href="Skills.html" class="navNow">Resume</a></li>
+            <li class="hideOnMobile"><a href="Projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display='none'
+        }
+      </script>
+        <main id="resumeSec">
+        <section id="edup">
+          <div>
+          
+            <h2>Education</h2>
+            <h3>2021 – Present</h3> 
+            Industrial Engineering and Management B.Sc. Student 
+            Ruppin Academic Center<br> 
+            Dean's list : Grades average – 90<br>
+            Proficient in C#, C++, HTML, SQL , SPSS, Excel , PowerPoint<br>
+            Relevant coursework: performance research, Object Oriented Programming, Human engineering, 
+            economy.
+            <h3>2008-2014 Ruppin High School</h3>
+            Graduated with full diploma, majored in physics and computer science .
+          </div>
+
+          </section> 
+          <section id="expp">
+            <div>
+            <h2>Experience</h2>
+            <h3>2022 – present | Security Guard & technical support | Team 3</h3>
+            Assigned to secure an AWS data and operations center. Provided technical support and troubleshooting 
+            for site.<br> Responsible for resolving technical issues and providing IT services.
+            <h3>2021-2022 | Epidemiologic Researcher | Ministry of Health</h3>
+            Performed research, monitored and analyzed spread of Covid-19.
+            <h3>2020 – 2022 | Scouts’ tribe coordinator | Israeli Scouts</h3>
+            Responsibility over hundreds of scouts in the ages of 9-18. Led aspects of instructorship and 
+            logistics.<br> Duties involved management of weekly routine sessions as well as coordination and 
+            execution of complex events such as field trips and ceremonies.
+          </div>
+        </section>
+        <section id="idfp">
+          <div>
+            <h2>Military Service</h2>
+            <h3>Miluim service| Air Support Officer</h3>
+            Performs the connection between the unit and the Air Force, in matters such as attacks by aircraft 
+            and helicopter gunships, and evacuation of the wounded that requires a helicopter.
+            <h3>2019 | Operations Officer | The Tactical Training Center – Ze’elim </h3>
+            Coordinated operational training perimeters and schedules between the various units in Ze’elim base.
+            <h3> 2015 – 2019 | Combat officer, Tank Commander and Platoon Commander | Armored Corps</h3>
+            Led a platoon of 40 combat soldiers and a staff of commandersthrough basic training.<br>
+            Led an operational armored corps platoon. Responsibility over several tanks, sub-commanders 
+            and soldiers. <br>Performed duties during operational routine and procedural training for maintenance 
+            of readiness level. 
+          </div>
+        </section>
+        <section id="volup">
+          <div>
+            <h2>Volunteer Work</h2>
+            2022-2023 | Mif’al Hapa’is scholarship | The economic company, Emek Hefer <br>
+            2021-2022 | Mif’al Hapa’is scholarship | Tutoring of a Child assigned by Welfare Department<br>
+            2014-2015 | Pre-Army Service Year | Ofakim Scouts’ tribe
+          </div>
+        </section>
+        <section id="langp">
+          <div>
+            <h2>Languages</h2>
+            Hebrew: native English: fluent
+          </div>
+        </section>
+
+         
+          </main> 
+     
+    
+</body>
+</html>

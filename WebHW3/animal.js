@@ -20,3 +20,9 @@ function renderAnimal() {
   function animalEscaped() {
     //ממשו את הלוגיקה של חיה שבורחת מגן החיות
   }
+
+
+
+  getOut();
+  document.body.insertAdjacentElement("afterbegin", getMainNav());
+  activeDropDwonAndReset();

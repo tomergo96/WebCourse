@@ -1,6 +1,6 @@
-function loginAsVisitor(visitorName) {
-    // תממשו את הלוגיקה של בחירת אורח שנכנס לגן החיות
-    // שמרו את האורח שבחרתם, בלוקל סטורג' כך שבכל העמודים נדע מי האורח הנוכחי
+function loginAsVisitor(visitor) {
+  localStorage.setItem("visitorIn", JSON.stringify(visitor));
+  window.location.href = "./zoo.html";
   }
 
 
@@ -50,16 +50,13 @@ function loginAsVisitor(visitorName) {
         const wrapper = document.createElement("div");
         wrapper.className = "cardP" ;
         wrapper.innerHTML = template;
-        wrapper.addEventListener("click", () => VisitorClick(visitor));
+        wrapper.addEventListener("click", () => loginAsVisitor(visitor));
         
         return wrapper;
   };
   
 
-  const VisitorClick = (visitor) => {
-    localStorage.setItem("visitorIn", JSON.stringify(visitor));
-    window.location.href = "./zoo.html";
-  };
+
   
 
   
@@ -78,7 +75,7 @@ function loginAsVisitor(visitorName) {
   };
  
   
-  
+  getOutLogin();
   searchBox();
   
   

@@ -64,7 +64,7 @@ function createNewVisitor(event) {
     {
     if (visitorExists(name)) 
     {
-      alert("A password was entered not according to the rules");   
+      alert("name exists");   
       return null; 
     } 
 
@@ -111,6 +111,10 @@ function createNewVisitor(event) {
       visitors.push(newUser);
       const stringifiedVisitors = JSON.stringify(visitors);
       localStorage.setItem("visitors", stringifiedVisitors);
+      visitorsForView=visitors.map(visitor => visitor);
+      localStorage.setItem("visitorsForView", JSON.stringify(visitorsForView));
+      visitorsNames=visitors.map(visitor=>visitor.name);
+      localStorage.setItem("visitorsNames", JSON.stringify(visitorsNames));
       localStorage.setItem("userIn", JSON.stringify(newUser));
       newUserName="";
       newUserPassword="";
@@ -154,6 +158,7 @@ function createNewVisitor(event) {
     }
   }
   
+  
   /**************************************
     מימשתי עבורכם את ההאזנה לאירוע שליחת טופס
     שימו לב כי האיידי של createForm
@@ -168,4 +173,3 @@ function createNewVisitor(event) {
   if (createFormExists) {
     createFormExists.addEventListener("submit", logInVisitor);
   }
-

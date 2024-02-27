@@ -25,6 +25,7 @@ const FilterShow =() => {
 
 
 
+
 const getAnimalHTMLCard = (animal) => {
   const template = `
      
@@ -143,5 +144,8 @@ function renderAvailableAnimals() {
     // ודאו כי אתם שומרים את הפילטרים שהיוזר בחר בלוקל סטורג׳ וטוענים אותם בהתאם
     // רנדרו רק את החיות שעומדות בתנאים של הפילטרים
   }
+  getOut();
   renderAvailableAnimals();
   FilterBox();
+  document.body.insertAdjacentElement("afterbegin", getMainNav());
+  activeDropDwonAndReset();

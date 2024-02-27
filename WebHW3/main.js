@@ -227,6 +227,7 @@ let visitors = [
   ];
 
 let visitorsForView=visitors.map(visitor => visitor);
+let visitorsNames=visitors.map(visitor=>visitor.name);
 let animalsForView=animals.map(animals => animals); 
 let userIn ; 
 let visitorIn;
@@ -238,12 +239,31 @@ let currAnimal;
     if (localStorage.getItem("visitors")) {
       visitors = JSON.parse(localStorage.getItem("visitors"));
     } else {
+      
       localStorage.setItem("visitors", JSON.stringify(visitors));
     }
+    if (localStorage.getItem("visitorsForView")) {
+      visitorsForView = JSON.parse(localStorage.getItem("visitorsForView"));
+    } else {
+      
+      localStorage.setItem("visitorsForView", JSON.stringify(visitorsForView));
+    }
+    if (localStorage.getItem("visitorsNames")) {
+      visitorsNames = JSON.parse(localStorage.getItem("visitorsNames"));
+    } else {
+      
+      localStorage.setItem("visitorsNames", JSON.stringify(visitorsNames));
+    }
+
     if (localStorage.getItem("animals")) {
       animals = JSON.parse(localStorage.getItem("animals"));
     } else {
       localStorage.setItem("animals", JSON.stringify(animals));
+    }
+    if (localStorage.getItem("animalsForView")) {
+      animalsForView = JSON.parse(localStorage.getItem("animalsForView"));
+    } else {
+      localStorage.setItem("animalsForView", JSON.stringify(animalsForView));
     }
     if (localStorage.getItem("userIn")) {
       userIn = JSON.parse(localStorage.getItem("userIn"));
@@ -266,9 +286,99 @@ let currAnimal;
   
     console.log(visitors);
   }
+
+
+  const getMainNav = () => {
+    const template = `
+        <nav class="main-nav">
+          <ul>
+           <li><a >
+           <select name="visitorsDropDown" id="visitor-select">
+           <option value="">choose visitor</option>
+           </select>
+           </a><li>
+           <li><a >
+            Hi ${visitorIn.name} 😎 !  Let's play - you have ${visitorIn.coins} coins 💰 
+            </a><li>
+            <li><a href="./dashboard.html">
+            <button type="button" class="btn btn-primary"" id="dashboard-button">Dashboard</button>
+            </a><li>
+            <li><a href="./zoo.html">
+            <button type="button" class="btn btn-success" id="zoo-button">Zoo</button>
+            </a><li>
+            <li><a href="./login.html">
+            <button type="button" class="btn btn-warning" id="visitors-button">Visitors</button>
+            </a><li>
+            
+            <li><a >
+            <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
+            </a><li>
+          </ul>
+            </nav>
+          
+        `;
+  
+    const wrapper = document.createElement("nav");
+    wrapper.className = "";
+    wrapper.innerHTML = template;
+    return wrapper;
+  };
+
+  const getOut = () => {
+
+    if (userIn===undefined)
+    {
+       window.location.href = "./signup.html";
+       return;
+    }
+    if (visitorIn===undefined)
+    {
+       window.location.href = "./login.html";
+       return;
+    }
+  }
+  const getOutLogin = () => {
+
+    if (userIn===undefined)
+    {
+       window.location.href = "./signup.html";
+       return;
+    }
+  }
+
+
+  const activeDropDwonAndReset = () => {
+    const visitorSelect = document.getElementById("visitor-select");
+  
+    // יצירת אפשרויות הדרופ דאון
+    for (const visitorName of visitorsNames) {
+      const option = document.createElement("option");
+      option.value = visitorName;
+      option.textContent = visitorName;
+      visitorSelect.appendChild(option);
+    }
+  
+    // הוספת אירוע "input" לדרופ דאון
+    visitorSelect.addEventListener("input", (e) => {
+      for (const visitor of visitors) {
+        if (visitor.name === e.target.value) {
+          localStorage.setItem("visitorIn", JSON.stringify(visitor));
+          location.reload();
+        }
+      }
+    });
+    const resetSelect=document.getElementById("reset-button");
+    resetSelect.addEventListener("click",() =>{
+    alert("The game is going to reset");
+    localStorage.clear();
+    window.location.href = "./signup.html";
+    });
+  };
+
   generateDataset();
   
   //********************** */
   function logout() {
     localStorage.setItem("userIn", null);
   }
+  

@@ -7,3 +7,10 @@ function showVisitedAnimals() {
   function showFavoriteAnimal() {
     //ממשו את הלוגיקה שמציגה את החיה שהאורח ביקר הכי הרבה פעמים אצלה
   }
+
+
+
+
+  getOut();
+  document.body.insertAdjacentElement("afterbegin", getMainNav());
+  activeDropDwonAndReset();

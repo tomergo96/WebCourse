@@ -150,7 +150,7 @@ let visitors = [
       height: 120,
       color: "brown",
       habitat: "land",
-      image: './images/Lion.png'
+      image: './images/lion.png'
     },
     {
       name: "Elephant",

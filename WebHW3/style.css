@@ -1,0 +1,153 @@
+
+
+body {
+   
+    background-image: url("./images/zoobackground.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1{
+    font-family: 'Choco Bubble', sans-serif;
+                                                                                        
+ text-align: center;
+ -webkit-text-fill-color: aliceblue;
+ 
+ padding: 10px;
+ 
+ 
+
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+}
+
+
+#startForms_container{
+    display: flex;
+    justify-content: center;
+    
+    gap: 200px;;
+       
+}
+
+.Fcontain {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* עדכן את הצבע אם נדרש */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+#animal-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+
+#visitorsHolder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+
+.card-img{
+    width: 150px;
+    height: 150px;
+}
+
+.cardP{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background: rgba(245, 245, 245, 0.8);
+    border-radius: 20%;
+    font-family: 'Choco Bubble', sans-serif;
+    
+    
+    
+}
+
+.none-visitors{
+    text-align: center;
+    margin:100px;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20%;
+    color: beige;
+
+}
+.loginNav{
+    font-size: 50px;
+    font-family: 'Choco Bubble', sans-serif;
+    color: aliceblue;
+    background: rgba(3, 168, 41, 0.9);
+    border-radius: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    
+                                              
+}
+#visitorSearchInput
+{
+  height: 40px;  
+  font-size: 30px;
+  width: 500px;
+}
+
+.filter-container{
+  width: 200px;
+  
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#zooPage-organization{
+    display: flex;
+    gap: 50px;
+}
+
+.animalSearch-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 190px;
+    background-color: rgba(0, 128, 0, 0.9);
+    padding: 20px;
+    color: aliceblue;
+    
+    font-family: 'Choco Bubble', sans-serif;
+    font-size: 20px;
+    position: sticky;
+    height:100vh;
+    
+
+}
+
+.form-control{
+    width: 180px;
+}
+
+
+
+
+
+

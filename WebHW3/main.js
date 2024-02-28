@@ -381,4 +381,11 @@ let currAnimal;
   function logout() {
     localStorage.setItem("userIn", null);
   }
+
+
+
+  
+  
+
+  
   

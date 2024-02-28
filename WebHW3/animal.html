@@ -16,21 +16,26 @@
     <script src="./main.js"></script>
   </head>
   <body>
-    <div>
+    <div id="main-animal-container">
+    <div id="MainAnimal">
+      <h3 id="name"></h3>
       <div id="image">
-        <!-- show here the animal image -->
       </div>
-      <div>
-        <h1 id="name"></h1>
+      <div>       
         <p id="weight"></p>
         <p id="height"></p>
         <p id="color"></p>
         <p id="habitat"></p>
         <p id="isPredator"></p>
-        <button id="feed-animal">Feed me</button>
+        <button id="feed-animal" class="btn btn-info">Feed me (2💰)</button>
       </div>
     </div>
+  </div>
+  <div class="animal-habitat-container">
+    <h3>More from this habitat  </h3>
     <div id="related-animals"></div>
+  </div>
+  
     <script src="./animal.js"></script>
   </body>
 </html>

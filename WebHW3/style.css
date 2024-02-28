@@ -5,7 +5,7 @@ body {
     background-image: url("./images/zoobackground.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
-    
+    font-family: 'Choco Bubble', sans-serif;
     
     
     padding-left: 10px;
@@ -16,7 +16,7 @@ h1{
     font-family: 'Choco Bubble', sans-serif;
                                                                                         
  text-align: center;
- -webkit-text-fill-color: aliceblue;
+
  
  padding: 10px;
  
@@ -62,6 +62,14 @@ h2{
 
 
 #animal-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+
+#related-animals{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -187,8 +195,38 @@ ul {
     align-items: center;
     justify-content: center;
   }
+
+
+  #MainAnimal{
+    color: antiquewhite;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Choco Bubble', sans-serif;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 70%;
+    width: 500px;
+    margin: 20px;
+    padding: 50px;
+    gap: 10px;
+  }
   
-  /* Change the link color to #111 (black) on hover */
+  #main-animal-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center; 
+  }
+  .animal-habitat-container {
+    font-family: 'Choco Bubble', sans-serif;
+    text-align: center;
+  }
+  .animal-habitat-container h3 {
+    background: white;
+  }
+  
 
 
 

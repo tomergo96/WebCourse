@@ -5,140 +5,160 @@ let visitors = [
       password : "123456",
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Emily Johnson",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Michael Williams",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Jessica Brown",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Christopher Jones",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Ashley Davis",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Matthew Miller",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Amanda Wilson",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "David Moore",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Sarah Taylor",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "James Anderson",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Jennifer Thomas",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Robert Jackson",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Elizabeth White",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Daniel Harris",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Melissa Martin",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "William Thompson",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Linda Garcia",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
     {
       name: "Joseph Martinez",
       password : "123456" ,
       coins: 50,
       gender : "male",
-      image: './images/man.png'
+      image: './images/man.png',
+      visits :[]
     },
     {
       name: "Karen Robinson",
       password : "123456" ,
       coins: 50,
       gender : "female",
-      image: './images/woman.png'
+      image: './images/woman.png',
+      visits :[]
     },
   ];
   
@@ -385,6 +405,35 @@ let currAnimal;
     localStorage.clear();
     window.location.href = "./signup.html";
     });
+  };
+
+  const addVisit = () => {
+    for (let i = 0; i < visitors.length; i++) {
+      if (visitors[i].name === visitorIn.name) { 
+        let exists = false; 
+  
+        
+        for (const visit of visitors[i].visits) {
+          if (visit.animalVisited === currAnimal.name) {
+            visit.countVis++; 
+            localStorage.setItem("visitors", JSON.stringify(visitors));
+            exists = true; 
+            return; 
+          }
+        }
+  
+        
+        if (!exists) {
+          const newVisit = {
+            animalVisited: currAnimal.name,
+            countVis: 1,
+            countFeed: 0
+          };
+          visitors[i].visits.push(newVisit);
+        }
+      }
+    }
+    localStorage.setItem("visitors", JSON.stringify(visitors));
   };
 
   generateDataset();

@@ -21,13 +21,15 @@ const getAnimalHTMLCardHbitat = (animal) => {
 
 const animalClickHabitat = (animal) => {
   localStorage.setItem("currAnimal", JSON.stringify(animal));
+  
   window.location.href = "./animal.html";
+  
 };
 
 
 
 function renderAnimal() {
-  
+ addVisit (); 
  const animalPicHolder = document.getElementById("image");
  animalPicHolder.innerHTML = `<img src="${currAnimal.image}" alt="${currAnimal.name}$">`;
  const animalNameHolder = document.getElementById("name");
@@ -128,8 +130,15 @@ function renderAnimal() {
   
       for (let i = 0; i < visitors.length; i++) {
         if (visitors[i].name === visitorIn.name) {
-          visitors[i].coins = visitorIn.coins - 10;
-          visitorIn=visitors[i];
+           visitors[i].coins = visitorIn.coins - 2;
+           for (const visit of visitors[i].visits) 
+               if (visit.animalVisited === currAnimal.name) 
+               {
+                   visit.countFeed++;
+                   visit.countVis--;
+               }
+           visitorIn=visitors[i];
+           
           break; 
            }
           }

@@ -39,6 +39,7 @@ const getAnimalHTMLCardDash = (animal) => {
 };
 
 const getFavAnimalHTMLCardDash = (animal,numFeed) => {
+  if (animal){
   const template = `
      
         <img class="dash-img-animal" src="${animal.image}" alt="${animal.name}" />
@@ -56,6 +57,8 @@ const getFavAnimalHTMLCardDash = (animal,numFeed) => {
       wrapper.className = "" ;
       wrapper.innerHTML = template; 
       return wrapper;
+  }
+  return " ";
 };
 
 

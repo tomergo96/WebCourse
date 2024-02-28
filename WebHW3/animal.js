@@ -88,7 +88,7 @@ function renderAnimal() {
   {
     const template = `
     <p>You dont have enough coins ;( </p><p> 'The ${currAnimal.name} escaped from the zoo' </p><p>😤😲😱</p>
-    <img src="./images/escape.jpg" class="feedDialogImg">
+    <img src="./images/escape.jpg"  alt="escapeimg">
     `
     const wrapper = document.createElement("div");
     wrapper.className = "";
@@ -100,7 +100,7 @@ function renderAnimal() {
   {
     const template = `
     <p>You dont have enough coins ;( </p><p>  ${visitorIn.name} is eaten </p> <p>😓😖😨</p>
-    <img src="./images/eaten.jpg">
+    <img src="./images/eaten.jpg" alt="eatenimg">
     `
     const wrapper = document.createElement("div");
     wrapper.className = "";

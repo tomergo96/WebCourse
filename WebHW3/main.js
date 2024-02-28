@@ -1,5 +1,4 @@
-
-  
+ 
 let visitors = [
     {
       name: "John Smith",

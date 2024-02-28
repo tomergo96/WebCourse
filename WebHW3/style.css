@@ -32,15 +32,18 @@ h2{
 #create-visitor-form{
     display: flex;
     flex-direction: column;
-    gap:20px;
+    
 
 }
 #exists-visitor-form{
     display: flex;
     flex-direction: column;
     gap:20px;
+    justify-content: space-between;
+    
 
 }
+
 #startForms_container{
     display: flex;
     justify-content: center;
@@ -109,6 +112,7 @@ h2{
     background: rgba(0, 0, 0, 0.85);
     border-radius: 20%;
     color: beige;
+    font-family: 'Choco Bubble', sans-serif;
 
 }
 .loginNav{
@@ -226,6 +230,41 @@ ul {
   .animal-habitat-container h3 {
     background: white;
   }
+
+  #feed-dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    text-align: center;
+    gap: 10px;
+    font-family: 'Choco Bubble', sans-serif;
+    font-size: 30px;
+    width: 550px;
+    height: 580px;
+    background: rgba(26, 150, 26, 0.99);
+   
+  }
+
+
+  #gameOver-visitors-dialog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    text-align: center;
+    gap: 10px;
+    font-family: 'Choco Bubble', sans-serif;
+    font-size: 30px;
+    width: 550px;
+    height: 580px;
+    background: rgba(26, 150, 26, 0.99);
+   
+  }
+
+
   
 
 

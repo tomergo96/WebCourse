@@ -1,4 +1,5 @@
-// מערכים גלובלים שישמשו אותנו בכל העמודים
+
+  
 let visitors = [
     {
       name: "John Smith",
@@ -337,14 +338,26 @@ let currAnimal;
        return;
     }
   }
-  const getOutLogin = () => {
+
+  const getOutAnimal = () => {
 
     if (userIn===undefined)
     {
        window.location.href = "./signup.html";
        return;
     }
+    if (visitorIn===undefined)
+    {
+       window.location.href = "./login.html";
+       return;
+    }
+    if (currAnimal===undefined)
+    {
+       window.location.href = "./zoo.html";
+       return;
+    }
   }
+
 
 
   const activeDropDwonAndReset = () => {

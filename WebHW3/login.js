@@ -1,3 +1,70 @@
+
+const VisitorsDialog = document.querySelector("#gameOver-visitors-dialog");
+const showVisitorsDialog = () => {
+  VisitorsDialog.style.visibility = "visible";
+  VisitorsDialog.style.opacity = 1;
+};
+
+// פונקציה להסתרת הדיאלוג
+const hideVisitorsDialog = () => {
+  VisitorsDialog.style.visibility = "hidden";
+  VisitorsDialog.style.opacity = 0;
+};
+
+const VisitorsDialogClose=()=>
+{
+
+  location.reload ();
+  hideVisitorsDialog ();
+  VisitorsDialog.closes();
+
+}
+ 
+const getEndVisitorsDiv = () =>
+{
+  const template = `
+  <img src="./images/game-over.png" alt="game-over-img">
+  <p>All visitors are eaten :(</p>
+  <p>You must reset the game and start all over</p>
+  <button id="reset-visitors-btn" class="btn btn-danger">RESET</button>
+  `
+  const wrapper = document.createElement("div");
+  wrapper.className = "end-visitors";
+  wrapper.innerHTML = template;
+  wrapper.children["reset-visitors-btn"].addEventListener("click",() =>{
+    alert("The game is going to reset");
+    localStorage.clear();
+    window.location.href = "./signup.html";
+
+  }
+        
+  
+   );
+  return wrapper;
+}
+
+
+
+
+const getOutLogin = () => {
+
+  if (userIn===undefined)
+  {
+     window.location.href = "./signup.html";
+     return;
+  }
+  if(visitors.length===0)
+    {
+      VisitorsDialog.innerHTML = "";
+      VisitorsDialog.append(getEndVisitorsDiv());
+      showVisitorsDialog ();
+      VisitorsDialog.showModal();
+    }
+}
+
+
+
+
 function loginAsVisitor(visitor) {
   localStorage.setItem("visitorIn", JSON.stringify(visitor));
   window.location.href = "./zoo.html";

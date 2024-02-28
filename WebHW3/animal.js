@@ -1,3 +1,8 @@
+
+const feedDialog = document.querySelector("#feed-dialog");
+
+
+
 const getAnimalHTMLCardHbitat = (animal) => {
   const template = `
      
@@ -18,12 +23,6 @@ const animalClickHabitat = (animal) => {
   localStorage.setItem("currAnimal", JSON.stringify(animal));
   window.location.href = "./animal.html";
 };
-
-
-
-
-
-
 
 
 
@@ -53,9 +52,71 @@ function renderAnimal() {
      
        animalsPlaceholder.append(...animalCards);
   }
+
+  const showfeedDialog = () => {
+    feedDialog.style.visibility = "visible";
+    feedDialog.style.opacity = 1;
+  };
+  
+  // פונקציה להסתרת הדיאלוג
+  const hidefeedDialog = () => {
+    feedDialog.style.visibility = "hidden";
+    feedDialog.style.opacity = 0;
+  };
+
+  const feedDialogClose=()=>
+  {
+
+    location.reload ();
+    hidefeedDialog ();
+    feedDialog.closes();
+    
+    
+  }
+  const getThankDiv = () =>
+  {
+    const template = `
+    <p>Thank you !</p><p> YUMMY </p><p>😋😋😋</p>
+    `
+    const wrapper = document.createElement("div");
+    wrapper.className = "";
+    wrapper.innerHTML = template;
+    return wrapper;
+  }
+
+  const getEscapeDiv = () =>
+  {
+    const template = `
+    <p>You dont have enough coins ;( </p><p> 'The ${currAnimal.name} escaped from the zoo' </p><p>😤😲😱</p>
+    <img src="./images/escape.jpg" class="feedDialogImg">
+    `
+    const wrapper = document.createElement("div");
+    wrapper.className = "";
+    wrapper.innerHTML = template;
+    return wrapper;
+  }
+
+  const getEatenDiv = () =>
+  {
+    const template = `
+    <p>You dont have enough coins ;( </p><p>  ${visitorIn.name} is eaten </p> <p>😓😖😨</p>
+    <img src="./images/eaten.jpg">
+    `
+    const wrapper = document.createElement("div");
+    wrapper.className = "";
+    wrapper.innerHTML = template;
+    return wrapper;
+  }
+
+  const getCloseModalHTMLButton = () => {
+    const closeButton = document.createElement("button");
+    closeButton.innerText = " Close modal";
+    closeButton.addEventListener("click", () => feedDialogClose());
+    return closeButton;
+  };
   
   function feedAnimal() {
-   if (visitorIn.coins<2)
+   if (visitorIn.coins<10)
       {
         if (currAnimal.isPredator===true)
             visitorGotEaten();
@@ -67,14 +128,19 @@ function renderAnimal() {
   
       for (let i = 0; i < visitors.length; i++) {
         if (visitors[i].name === visitorIn.name) {
-          visitors[i].coins = visitorIn.coins - 2;
+          visitors[i].coins = visitorIn.coins - 10;
           visitorIn=visitors[i];
-          break; // Exit the loop after finding the visitor
+          break; 
            }
           }
           localStorage.setItem("visitors", JSON.stringify(visitors));
           localStorage.setItem("visitorIn", JSON.stringify(visitorIn));
-          location.reload ();
+          feedDialog.innerHTML = "";
+          feedDialog.append(getThankDiv(),getCloseModalHTMLButton());
+          showfeedDialog ();
+          feedDialog.showModal();
+          
+          
         }
         
         
@@ -83,11 +149,47 @@ function renderAnimal() {
 
   
   function visitorGotEaten() {
-    // ממשו את הלוגיקה של חיה שטורפת אורח
+    for (let i = 0; i < visitors.length; i++) {
+      if (visitors[i].name === visitorIn.name) {  
+        visitors.splice (i,1) ;
+        
+        
+        
+        break; 
+         }
+        }
+        feedDialog.append(getEatenDiv(),getCloseModalHTMLButton());
+        visitorIn=undefined;
+        localStorage.setItem("visitorIn", JSON.stringify(visitorIn));
+        localStorage.setItem("visitors", JSON.stringify(visitors));
+        visitorsForView=visitors.map(visitor => visitor);
+        localStorage.setItem("visitorsForView", JSON.stringify(visitorsForView));
+        visitorsNames=visitors.map(visitor=>visitor.name);
+        localStorage.setItem("visitorsNames", JSON.stringify(visitorsNames));
+        showfeedDialog ();
+        feedDialog.showModal();
+        
+
+
   }
   
   function animalEscaped() {
-    //ממשו את הלוגיקה של חיה שבורחת מגן החיות
+    for (let i = 0; i < animals.length; i++) {
+      if (animals[i].name === currAnimal.name) {  
+        animals.splice (i,1) ;
+
+        break; 
+         }
+        }
+        feedDialog.append(getEscapeDiv(),getCloseModalHTMLButton());
+        currAnimal=undefined;
+        localStorage.setItem("currAnimal", JSON.stringify(currAnimal));
+        localStorage.setItem("animals", JSON.stringify(animals));
+        animalsForView=animals.map(animal => animal);
+        localStorage.setItem("animalsForView", JSON.stringify(animalsForView));
+        showfeedDialog ();
+        feedDialog.showModal();
+        
   }
 
   const activeFeedMe =  () => {
@@ -101,7 +203,7 @@ function renderAnimal() {
 
 
 
-  getOut();
+  getOutAnimal();
   document.body.insertAdjacentElement("afterbegin", getMainNav());
   activeDropDwonAndReset();
   renderAnimal();

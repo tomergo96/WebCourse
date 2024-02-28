@@ -88,10 +88,39 @@ h2{
     justify-content: space-around;
 
 }
+#dash-container{
+display: flex;
+font-family: 'Choco Bubble', sans-serif;
+justify-content: space-around;
+font-size: 25px;
+color: antiquewhite;
+
+}
+
+#meDash{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 255, 0.85);
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  max-height: 300x;
+  border-radius: 2%;
+}
 
 .card-img{
     width: 150px;
     height: 150px;
+}
+.dash-img{
+  width: 300px;
+  height: 300px;
+}
+.dash-img-animal{
+  width: 100px;
+  height: 100px;
 }
 
 .cardP{
@@ -100,10 +129,68 @@ h2{
     text-align: center;
     background: rgba(245, 245, 245, 0.8);
     border-radius: 20%;
-    font-family: 'Choco Bubble', sans-serif;
-    
-    
-    
+    font-family: 'Choco Bubble', sans-serif;     
+}
+.cardDanimal{
+
+  text-align: center;
+  border-radius: 20%;
+  font-family: 'Choco Bubble', sans-serif;     
+}
+
+#visited-animals{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+
+#feeded-animals{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+#visAndFed{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 30px;
+ 
+}
+#fav-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 255, 0.85);
+  text-align: center;
+  border-radius: 5%;
+}
+
+
+#visited-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 255, 0.85);
+  text-align: center;
+ 
+  border-radius: 5%;
+  
+  
+}
+#feeded-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 255, 0.85);
+  text-align: center;
+  padding: 20px;
+  border-radius: 5%;
+  
 }
 
 .none-visitors{
@@ -128,6 +215,12 @@ h2{
     margin: 20px;
     
                                               
+}
+
+
+.mainNav{
+  position: sticky;
+  top: 0;
 }
 #visitorSearchInput
 {
@@ -160,7 +253,7 @@ h2{
     
     font-family: 'Choco Bubble', sans-serif;
     font-size: 20px;
-    position: sticky;
+    
     height:100vh;
     border-radius: 10%;
     

@@ -132,7 +132,7 @@ function renderAnimal() {
         if (visitors[i].name === visitorIn.name) {
            visitors[i].coins = visitorIn.coins - 2;
            for (const visit of visitors[i].visits) 
-               if (visit.animalVisited === currAnimal.name) 
+               if (visit.animalVisited.name === currAnimal.name) 
                {
                    visit.countFeed++;
                    visit.countVis--;

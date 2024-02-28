@@ -329,8 +329,10 @@ let currAnimal;
             <li><a href="./login.html">
             <button type="button" class="btn btn-warning" id="visitors-button">Visitors</button>
             </a><li>
-            
-            <li><a >
+            <li><a href="./signup.html">
+            <button type="button" class="btn btn-secondary" id="signup-button">Add visitor</button>
+            </a><li>
+            <li><a>
             <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
             </a><li>
           </ul>
@@ -339,7 +341,7 @@ let currAnimal;
         `;
   
     const wrapper = document.createElement("nav");
-    wrapper.className = "";
+    wrapper.className = "mainNav";
     wrapper.innerHTML = template;
     return wrapper;
   };
@@ -414,9 +416,10 @@ let currAnimal;
   
         
         for (const visit of visitors[i].visits) {
-          if (visit.animalVisited === currAnimal.name) {
-            visit.countVis++; 
-            localStorage.setItem("visitors", JSON.stringify(visitors));
+          if (visit.animalVisited.name === currAnimal.name) {
+             visit.countVis++; 
+             localStorage.setItem("visitors", JSON.stringify(visitors));
+             
             exists = true; 
             return; 
           }
@@ -425,7 +428,7 @@ let currAnimal;
         
         if (!exists) {
           const newVisit = {
-            animalVisited: currAnimal.name,
+            animalVisited: currAnimal,
             countVis: 1,
             countFeed: 0
           };

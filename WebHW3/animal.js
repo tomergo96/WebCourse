@@ -118,7 +118,7 @@ function renderAnimal() {
   };
   
   function feedAnimal() {
-   if (visitorIn.coins<10)
+   if (visitorIn.coins<2)
       {
         if (currAnimal.isPredator===true)
             visitorGotEaten();

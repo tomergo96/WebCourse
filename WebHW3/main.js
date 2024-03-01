@@ -408,7 +408,7 @@ let currAnimal;
     window.location.href = "./signup.html";
     });
   };
-
+  
   const addVisit = () => {
     for (let i = 0; i < visitors.length; i++) {
       if (visitors[i].name === visitorIn.name) { 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 90%;
+            height: 150vh;
+            margin:auto;
+        }
+        #container h1{
+            position: sticky;
+            top:0;
+            text-align: center;
+            background-color: darkblue;
+            color: white;
+        }
+        #content {
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+        }
+        #models{
+           width:70%;
+           display: flex;
+           gap:20px;
+           flex-wrap: wrap;
+           justify-content: center;
+
+           
+           
+        }
+        .models{
+            border: 3px solid darkblue;
+            width:48%;
+        }
+        .models img {
+            width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>porsche</h1>
+        <div id="content">
+            <div id="left" class="ads">
+            <ol>
+                <li><a href="https://www.porsche.com/usa/"  target="_blank">Call Us</a></li>
+                <li>Why porsche?</li>
+                <li>related articles</li>
+            </ol>
+            </div>
+            <div id="models" >
+                <div class="models">
+                <h3>911</h3>
+                <img src="./911.jpg" alt="911">
+                </div>
+                <div class="models">
+                    <h3>panamera</h3>
+                    <img src="./panamera.jpg" alt="panamera"> 
+                </div>
+                <div class="models">
+                    <h3>Taycan</h3>
+                    <img src="./Taycan.jpg" alt="Taycan">   
+                </div>
+                <div class="models">
+                    <h3>718</h3>
+                    <img src="./718.jpg" alt="718">  
+                </div>
+                
+            </div>
+            <div id="right" class="ads">
+                <ol>
+                    <li><a href="http://www.youtube.com/"  target="_blank">Videos</a></li>
+                    <li>Gallery</li>
+                    <li>Test drive</li>
+                </ol>  
+            </div>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

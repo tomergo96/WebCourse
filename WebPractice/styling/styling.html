@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style type="text/css">
+      #ph {
+        margin-top: 100px;
+        
+      }
+
+      table {
+        text-align: center;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <body>
+    <div id="controls">
+      <table>
+        <tr>
+          <td>Font Size</td>
+          <td>Red</td>
+          <td>Green</td>
+          <td>Blue</td>
+        </tr>
+        <tr>
+          <td>
+            <select id="fontSizeSelect">
+              <option value="12">12</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" id="red" />
+          </td>
+          <td>
+            <input type="text" id="green" />
+          </td>
+          <td>
+            <input type="text" id="blue" />
+          </td>
+        </tr>
+      </table>
+
+      <button onclick="press()">Press Me</button>
+    </div>
+
+    <div id="ph" >This is some text</div>
+    <script>
+       function press () {
+        const xfont=(document.getElementById("fontSizeSelect")).value;
+        const xred =(document.getElementById("red")).value;
+        const xgreen =(document.getElementById("green")).value;
+        const xblue =(document.getElementById("blue")).value;
+        if (xblue<0 || xblue>255 || xgreen<0 || xgreen>255 || xred<0 || xred>255)
+            {
+                alert("colors must be between 0 to 255");
+                return;
+            }
+        const xtext = document.getElementById("ph");
+        xtext.style.backgroundColor = `rgb(${xred}, ${xgreen}, ${xblue})`; 
+        xtext.style.fontSize=xfont+"px";
+       } 
+
+
+    </script>
+  </body>
+</html>

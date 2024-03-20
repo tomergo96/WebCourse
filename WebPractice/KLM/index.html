@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width:100%;
+            height: 500px;
+            background-color: #9cb8c5;
+            display: flex;
+        }
+
+        #LeftDiv{
+            width: 20%;
+            height: 100%;
+        }
+        #RightDiv{
+            width: 80%;
+            height: 100%;
+            background-color: #d8af7b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #klm-link{
+            position: absolute;
+            top: 50px;
+        }
+
+        #upper{
+            height: 50%;
+            width: 90%;
+            display: flex;
+        }
+        #lower{
+            height: 50%;
+            width: 90%;
+            background-color: #d68827;
+            text-align: center;
+        }
+
+        .upperDivs{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #images{
+            background-color: #d68827;
+        }
+
+        #RightDiv #upper img{
+            height: 100%;
+        }
+        #lower h1{
+           margin: 0;
+           padding-top: 100px; 
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+   <div id="LeftDiv">
+   <p id="klm-link">
+    <a href="http://www.klm.com ">link to KLM</a>
+   </p>
+   </div>
+   <div id="RightDiv">
+    <div id="upper">
+        <div id="images" class="upperDivs">
+         <img src="./images/Amsterdam.jpg" alt="amsterdam">
+        </div>
+        <div id="ads" class="upperDivs">
+         <img src="./images/klm.jpg" alt="klm">  
+        </div>
+    </div>
+    <div id="lower">
+        <h1>Visit Amsterdam</h1>
+    </div>
+   </div>
+   </div> 
+</body>
+</html>
